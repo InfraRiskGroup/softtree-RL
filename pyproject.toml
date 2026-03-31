@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "softtree-RL"
+version = "0.1.0"
+description = "reinforcement learning based on soft and oblique tree models"
+dependencies = [
+    "torchrl",
+    "torch",
+    "tqdm",
+    "softtree @ git+https://github.com/cedavidyang/softtree.git"
+]
+
+# This automatically finds the 'softtree' folder inside the repo
+[tool.setuptools.packages.find]
+where = ["."]
